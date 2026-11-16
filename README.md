@@ -51,6 +51,10 @@ Through this project, I practised:
 - Responsive web design
 - Search, filtering and sorting logic
 
+## Screenshots
+
+![CareerTrack Dashboard](careertrack.png)
+
 ## Author
 
 Mansi Agrawal
