@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+
+    <!-- Connecting CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">CareerTrack</div>
+
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#applications">Applications</a>
+            </div>
+        </nav>
+
+
+        <!-- Header -->
+        <header>
+            <h1>Job Application Tracker</h1>
+            <p>Manage your job applications in one place.</p>
+        </header>
+
+        <!-- Dashboard Statistics -->
+        <section class="stats" id="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Applications</h3>
+                <p id="totalCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Applied</h3>
+                <p id="appliedCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Interviews</h3>
+                <p id="interviewCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Selected</h3>
+                <p id="selectedCount">0</p>
+            </div>
+
+        </section>
+
+        <!-- Add Application Form -->
+        <section class="form-section">
+
+            <h2 id="formTitle">Add New Application</h2>
+
+            <form id="applicationForm">
+
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Company Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="position"
+                    placeholder="Job Position"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="applicationDate"
+                    required
+                >
+
+                <select id="status">
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <button type="submit" id="submitButton">Add Application</button>
+                <button type="button" id="cancelEdit" style="display: none;">
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Search and Filter -->
+        <section class="filter-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search company..."
+            >
+
+            <select id="filterStatus">
+                <option value="All">All Statuses</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+
+            <select id="sortDate">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+
+        </section>
+
+            
+
+
+        <!-- Applications List -->
+        <section class="applications-section" id="applications">
+
+            <h2>My Applications</h2>
+
+            <div id="applicationList">
+                <!-- JavaScript will display applications here -->
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Connecting JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
